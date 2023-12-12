@@ -8,7 +8,7 @@ namespace KrutangerHighSchoolDB
         private string[] MenuOptions { get; set; }
         private ConsoleKeyInfo KeyInfo { get; set; }
         private ConsoleKey KeyPressed { get; set; }
-        private int SelectedIndex { get; set; }        
+        private int SelectedIndex { get; set; }
 
         public Menu(string prompt, string[] menuOptions)
         {
@@ -18,7 +18,7 @@ namespace KrutangerHighSchoolDB
         }
 
         public int GetMenuChoice()
-        {            
+        {
             do
             {
                 DisplayMenu();
@@ -33,12 +33,12 @@ namespace KrutangerHighSchoolDB
                         break;
                     case ConsoleKey.DownArrow:
                         SelectedIndex = (SelectedIndex + 1 + MenuOptions.Length) % MenuOptions.Length;
-                        break;                           
+                        break;
                 }
             } while (KeyPressed != ConsoleKey.Enter);
 
             return SelectedIndex;
-        }        
+        }
 
         private void DisplayMenu()
         {
@@ -62,8 +62,7 @@ namespace KrutangerHighSchoolDB
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.BackgroundColor = ConsoleColor.Black;
                 }
-
-                Console.WriteLine($"{prefix} {currentOption}");                
+                Console.WriteLine($"{prefix} {currentOption}");
             }
             Console.ResetColor();
         }
