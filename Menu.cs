@@ -14,7 +14,7 @@ namespace KrutangerHighSchoolDB
         {
             Prompt = prompt;
             MenuOptions = menuOptions;
-            SelectedIndex = 0;            
+            SelectedIndex = 0;
         }
 
         public int GetMenuChoice()
@@ -23,7 +23,7 @@ namespace KrutangerHighSchoolDB
             {
                 DisplayMenu();
 
-                KeyInfo = Console.ReadKey(true);
+                KeyInfo = Console.ReadKey();
                 KeyPressed = KeyInfo.Key;
 
                 switch (KeyPressed)

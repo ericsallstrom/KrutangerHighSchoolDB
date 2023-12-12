@@ -7,27 +7,32 @@
 
         public void RunApp()
         {
-            RunMainMenu();
+            Console.CursorVisible = false;
 
-            switch (MenuChoice)
+            while (true)
             {
-                case 0:
-                    SeeStaff();
-                    break;
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    Console.WriteLine("\nThe program has now terminated. Have a great day!");
-                    break;
-            }
+                RunMainMenu();
+
+                switch (MenuChoice)
+                {
+                    case 0:
+                        SeeStaff();
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        Console.WriteLine("\nThe program has now terminated. Have a great day!");
+                        return;
+                }
+            }        
         }
 
         private void RunMainMenu()
