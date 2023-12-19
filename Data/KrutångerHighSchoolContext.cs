@@ -47,21 +47,26 @@ public partial class KrutångerHighSchoolContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
+        // Check if the DbContext options are not already configured.
         if (!optionsBuilder.IsConfigured)
         {
             try
             {
+                // Use the ConfigurationsBuilder to build a configuration from appsettings.json.
                 IConfiguration config = new ConfigurationBuilder()
                     .SetBasePath(AppContext.BaseDirectory)
                     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                     .Build();
 
+                // Get the connection string from appsettings.json.
                 string connectionString = config.GetConnectionString("KrutångerDbContext")!;
 
+                // Configure DbContext to use SQL Server with the obtained connection string.
                 optionsBuilder.UseSqlServer(connectionString);
             }
             catch (Exception ex)
             {
+                // If an exception occurs during configuration, print the error message to the console.
                 Console.WriteLine(ex.Message);
             }
         }
