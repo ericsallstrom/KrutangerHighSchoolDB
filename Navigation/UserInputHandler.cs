@@ -1,7 +1,7 @@
 ﻿using KrutangerHighSchoolDB.Data;
 using System.Text.RegularExpressions;
 
-namespace KrutangerHighSchoolDB
+namespace KrutangerHighSchoolDB.Navigation
 {
     internal class UserInputHandler
     {

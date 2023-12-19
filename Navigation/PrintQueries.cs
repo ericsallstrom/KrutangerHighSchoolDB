@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Net.NetworkInformation;
 using System.Security.Claims;
 
-namespace KrutangerHighSchoolDB
+namespace KrutangerHighSchoolDB.Navigation
 {
     internal class PrintQueries
     {

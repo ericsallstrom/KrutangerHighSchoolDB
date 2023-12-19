@@ -1,4 +1,5 @@
 ﻿using KrutangerHighSchoolDB.Data;
+using KrutangerHighSchoolDB.Navigation;
 
 namespace KrutangerHighSchoolDB
 {
